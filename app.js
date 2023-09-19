@@ -17,11 +17,11 @@ app.use(express.json())
 app.use(bodyparser.urlencoded({extended:true}))
 
 const corsOptions = {
-    origin: [" https://muhammed-sayeed.github.io","http://localhost:4200"],
-    methods: "GET, POST,PUT,DELETE,PATCH",
+    origin: ["https://muhammed-sayeed.github.io", "http://localhost:4200"],
+    methods: "GET, POST, PUT, DELETE, PATCH",
     allowedHeaders: "Content-Type, Authorization",
-    optionsSuccessStatus: 200, 
-  };
+    optionsSuccessStatus: 200,
+  };  
   app.use(cors(corsOptions));
 
 const port = process.env.PORT || 3000
