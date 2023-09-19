@@ -17,7 +17,7 @@ app.use(express.json())
 app.use(bodyparser.urlencoded({extended:true}))
 
 const corsOptions = {
-    origin: "http://localhost:4200",
+    origin: " https://muhammed-sayeed.github.io/sample-front/",
     methods: "GET, POST,PUT,DELETE,PATCH",
     allowedHeaders: "Content-Type, Authorization",
     optionsSuccessStatus: 200, 
