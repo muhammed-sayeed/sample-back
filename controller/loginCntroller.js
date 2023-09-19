@@ -16,12 +16,15 @@ export const login =  async(req, res) => {
             }
             const data = await bcrypt.compare(password,user.password)
             if(data){
+                const exp = process.env.tokenlife
+                console.log('env',exp);
                 const token = jsonwebtoken.sign(userDetails,process.env.tokensecret,{
-                    expiresIn: process.env.tokenlife,
+                    expiresIn: exp,
                 })
                 const refreshtoken = jsonwebtoken.sign(userDetails,process.env.refreshtokensecret,{
                     expiresIn: process.env.refreshtokenlife,
                 })
+                console.log('token',token);
                 const tokens ={
                     access: token,
                     refresh: refreshtoken

@@ -27,6 +27,7 @@ export const register = async(req,res)=>{
         })
         await newUser.save()
         let userdetails = {
+            fname: req.body.fname,
             email: req.body.email
         }
         const token = jsonwebtoken.sign(userdetails, process.env.tokensecret,{
