@@ -1,4 +1,4 @@
-# authentication and authorization Node.js API
+# product browsing Node.js API
 
 This repository contains a Node.js API that serves as the backend for the product browsing web app. The API provides routes and functionalities to handle user authentication, product details. It works in conjunction with the product browsing web app, which utilizes JWT (JSON Web Token) refresh and access tokens for user authentication. It is designed specifically for the purpose of supporting the [ product browsing app](https://github.com/muhammed-sayeed/sample-back.git) project.
 
